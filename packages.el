@@ -50,3 +50,8 @@
 ;(unpin! t)
 
 (package! nyan-mode)
+(package! ivy-bibtex)
+(package! academic-phrases)
+(package! reftex)
+(package! synosaurus)
+(package! wordnut)
