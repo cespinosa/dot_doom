@@ -52,3 +52,11 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(use-package! nyan-mode
+   :custom
+   (nyan-cat-face-number 4)
+   (nyan-animate-nyancat t)
+   :hook
+   (doom-modeline-mode . nyan-mode))
+
