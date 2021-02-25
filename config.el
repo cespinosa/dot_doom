@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+;; (setq user-full-name "John Doe"
+;;       user-mail-address "john@doe.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -25,15 +25,15 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+;; (setq doom-theme 'doom-one)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+;; (setq org-directory "~/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+;; (setq display-line-numbers-type t)
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -52,6 +52,25 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(setq user-full-name "Carlos Espinosa-Ponce"
+      user-mail-address "cespinosa@astro.unam.mx")
+
+
+(setq doom-font (font-spec :family "Hack Nerd Font" :size 16 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 18))
+
+(setq doom-theme 'doom-one)
+
+(setq org-directory "/home/espinosa/Google_Drive/fractaliusfciencias/Org/")
+
+(setq display-line-numbers-type 'relative)
+
+(setq
+ fill-column 80 ; Set width for automatic line breaks
+ tab-width 4    ; Set width for tabs
+)
+
 
 (use-package! nyan-mode
    :custom
