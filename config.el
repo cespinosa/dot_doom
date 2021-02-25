@@ -67,7 +67,7 @@
 (setq display-line-numbers-type 'relative)
 
 (setq
- fill-column 80 ; Set width for automatic line breaks
+fill-column 80 ; Set width for automatic line breaks
  tab-width 4    ; Set width for tabs
 )
 
@@ -222,7 +222,7 @@
   )
 
 (use-package ivy-bibtex
-  :ensure t
+  ;;:ensure t
   :bind*
   ("C-c M-c C-r" . ivy-bibtex)
   :config
@@ -255,10 +255,12 @@
 )
 
 ;; writing tool
-(use-package academic-phrases :ensure t)
+(use-package academic-phrases 	
+  ;; :ensure t
+)
 
 (use-package reftex
-  :ensure t
+  ;; :ensure t
   :defer t
   :config
   (setq reftex-cite-prompt-optional-args t)
