@@ -311,3 +311,4 @@ fill-column 80 ; Set width for automatic line breaks
 
 (use-package wordnut
   :bind ("C-c M-c w" . wordnut-lookup-current-word))
+(setq org-superstar-headline-bullets-list '("" "" "" "" "" "" "" "" "" ""))
