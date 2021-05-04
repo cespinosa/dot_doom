@@ -49,6 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+;; (package! dashboard)
 (package! nyan-mode)
 (package! ivy-bibtex)
 (package! academic-phrases)
