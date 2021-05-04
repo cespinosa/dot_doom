@@ -56,7 +56,6 @@
 (setq user-full-name "Carlos Espinosa-Ponce"
       user-mail-address "cespinosa@astro.unam.mx")
 
-
 (setq doom-font (font-spec :family "Hack Nerd Font" :size 16 :weight 'semi-light)
       doom-variable-pitch-font (font-spec :family "Hack Nerd Font" :size 18))
 
@@ -70,6 +69,25 @@
 fill-column 80 ; Set width for automatic line breaks
  tab-width 4    ; Set width for tabs
 )
+
+;; Dashboard Config
+;;
+;; (use-package dashboard
+;;   :init
+;;   (setq dashboard-set-heading-icons t)
+;;   (setq dashboard-set-file-icons t)
+;;   (setq dashboard-center-content nil)
+;;   (setq dashboard-items '((recents . 5)
+;;                           (agenda . 5 )
+;;                           (bookmarks . 5)
+;;                           (projects . 5)
+;;                           (registers . 5)))
+;;   :config
+;;   (dashboard-setup-startup-hook)
+;;   (dashboard-modify-heading-icons '((recents . "file-text")
+;;                                     (bookmarks . "book")))
+;;   )
+
 
 (use-package! nyan-mode
    :custom
@@ -255,6 +273,12 @@ fill-column 80 ; Set width for automatic line breaks
          (setq TeX-source-correlate-start-server t)))
   )
 
+(setq org-pomodoro-start-sound "~/.doom.d/sounds/focus_bell.wav")
+(setq org-pomodoro-short-break-sound "~/.doom.d/sounds/three_beeps.wav")
+(setq org-pomodoro-long-break-sound "~/.doom.d/sounds/three_beeps.wav")
+(setq org-pomodoro-finished-sound "~/.doom.d/sounds/meditation_bell.wav")
+
+
 (use-package ivy-bibtex
   ;;:ensure t
   :bind*
@@ -279,7 +303,7 @@ fill-column 80 ; Set width for automatic line breaks
   (defun bibtex-completion-open-pdf-external (keys &optional fallback-action)
     (let ((bibtex-completion-pdf-open-function
            (lambda (fpath) (start-process "evince" "*helm-bibtex-evince*" "/usr/bin/evince" fpath))))
-      (bibtex-completion-open-pdf fallback-action)))
+      (bibtex-completion-open-pdf keys fallback-action)))
   (ivy-bibtex-ivify-action bibtex-completion-open-pdf-external ivy-bibtex-open-pdf-external)
   (ivy-add-actions
    'ivy-bibtex
